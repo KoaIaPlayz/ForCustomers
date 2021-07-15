@@ -1,0 +1,533 @@
+local KeyScreen = Instance.new("ScreenGui")
+local KeyFrame = Instance.new("Frame")
+local MainUiCorner = Instance.new("UICorner")
+local TabButtons = Instance.new("Frame")
+local TabCornerFrame = Instance.new("UICorner")
+local TabListLayout = Instance.new("UIListLayout")
+local AboutKh = Instance.new("TextButton")
+local AbutKhCorner = Instance.new("UICorner")
+local WhatKhSupports = Instance.new("TextButton")
+local WhatKhSupportsCorner = Instance.new("UICorner")
+local DiscordLink = Instance.new("TextButton")
+local DiscordLinkCorner = Instance.new("UICorner")
+local Credits = Instance.new("TextButton")
+local CreditsCorner = Instance.new("UICorner")
+local EnterKoalaHub = Instance.new("TextButton")
+local Enter = Instance.new("UICorner")
+local TabsFrame = Instance.new("Frame")
+local AboutKhFrame = Instance.new("Frame")
+local KhubInfoLabel = Instance.new("TextLabel")
+local TextForKhInfo = Instance.new("TextLabel")
+local UiCornerKhInfo = Instance.new("UICorner")
+local WhatKhSupportsFrame = Instance.new("Frame")
+local WhatKhSupportsLabel = Instance.new("TextLabel")
+local WhatKhSupportsText = Instance.new("TextLabel")
+local WhatKhSupportsTextsCorner = Instance.new("UICorner")
+local CreditsFrame = Instance.new("Frame")
+local CreditsLabel = Instance.new("TextLabel")
+local CreditsLabel_2 = Instance.new("TextLabel")
+local CreditsLabel_3 = Instance.new("TextLabel")
+local CreditsLabel_4 = Instance.new("TextLabel")
+local CreditsLabel_5 = Instance.new("TextLabel")
+local EnterKHub = Instance.new("Frame")
+local Submit = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local EnterKhubLabel = Instance.new("TextLabel")
+local TextLabel = Instance.new("TextLabel")
+local TextBox = Instance.new("TextBox")
+local UICorner_2 = Instance.new("UICorner")
+local RainbowDrag = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+
+KeyScreen.Name = "KeyScreen"
+KeyScreen.Parent = game.CoreGui
+KeyScreen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+KeyFrame.Name = "KeyFrame"
+KeyFrame.Parent = KeyScreen
+KeyFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+KeyFrame.Position = UDim2.new(0.338560253, 0, 0.349707633, 0)
+KeyFrame.Size = UDim2.new(0, 601, 0, 313)
+KeyFrame.Active = true
+KeyFrame.Draggable = true
+
+MainUiCorner.CornerRadius = UDim.new(0, 3)
+MainUiCorner.Name = "MainUiCorner"
+MainUiCorner.Parent = KeyFrame
+
+TabButtons.Name = "TabButtons"
+TabButtons.Parent = KeyFrame
+TabButtons.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+TabButtons.Size = UDim2.new(0, 135, 0, 313)
+
+TabCornerFrame.CornerRadius = UDim.new(0, 4)
+TabCornerFrame.Name = "TabCornerFrame"
+TabCornerFrame.Parent = TabButtons
+
+TabListLayout.Name = "TabListLayout"
+TabListLayout.Parent = TabButtons
+TabListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+TabListLayout.Padding = UDim.new(0, 2)
+
+AboutKh.Name = "AboutKh"
+AboutKh.Parent = TabButtons
+AboutKh.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+AboutKh.BorderSizePixel = 0
+AboutKh.Position = UDim2.new(0, 0, 0.153153151, 0)
+AboutKh.Size = UDim2.new(0, 135, 0, 49)
+AboutKh.Font = Enum.Font.Nunito
+AboutKh.Text = "About KoalaHub"
+AboutKh.TextColor3 = Color3.fromRGB(255, 255, 255)
+AboutKh.TextSize = 20.000
+
+AbutKhCorner.CornerRadius = UDim.new(0, 4)
+AbutKhCorner.Name = "AbutKhCorner"
+AbutKhCorner.Parent = AboutKh
+
+WhatKhSupports.Name = "WhatKhSupports"
+WhatKhSupports.Parent = TabButtons
+WhatKhSupports.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+WhatKhSupports.BorderSizePixel = 0
+WhatKhSupports.Position = UDim2.new(0, 0, 0.306306303, 0)
+WhatKhSupports.Size = UDim2.new(0, 135, 0, 51)
+WhatKhSupports.Font = Enum.Font.Nunito
+WhatKhSupports.Text = "What KoalaHub Supports"
+WhatKhSupports.TextColor3 = Color3.fromRGB(255, 255, 255)
+WhatKhSupports.TextSize = 14.000
+WhatKhSupports.TextWrapped = true
+
+WhatKhSupportsCorner.CornerRadius = UDim.new(0, 4)
+WhatKhSupportsCorner.Name = "WhatKhSupportsCorner"
+WhatKhSupportsCorner.Parent = WhatKhSupports
+
+DiscordLink.Name = "DiscordLink"
+DiscordLink.Parent = TabButtons
+DiscordLink.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+DiscordLink.BorderSizePixel = 0
+DiscordLink.Position = UDim2.new(0, 0, 0.312312305, 0)
+DiscordLink.Size = UDim2.new(0, 135, 0, 48)
+DiscordLink.Font = Enum.Font.Nunito
+DiscordLink.Text = "Discord Link"
+DiscordLink.TextColor3 = Color3.fromRGB(255, 255, 255)
+DiscordLink.TextSize = 20.000
+DiscordLink.TextWrapped = true
+DiscordLink.MouseButton1Down:connect(function()
+	setclipboard("https://discord.gg/EPY9vkyVc3")
+	game.StarterGui:SetCore("SendNotification", {
+
+		Title = "Notification!";
+
+		Text = "Discord Copied!";
+
+		Icon = "rbxassetid://375691700";
+
+		Duration = 3;
+
+	})
+end)
+
+DiscordLinkCorner.CornerRadius = UDim.new(0, 4)
+DiscordLinkCorner.Name = "DiscordLinkCorner"
+DiscordLinkCorner.Parent = DiscordLink
+
+Credits.Name = "Credits"
+Credits.Parent = TabButtons
+Credits.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+Credits.BorderSizePixel = 0
+Credits.Position = UDim2.new(0, 0, 0.312312305, 0)
+Credits.Size = UDim2.new(0, 135, 0, 48)
+Credits.Font = Enum.Font.Nunito
+Credits.Text = "Credits"
+Credits.TextColor3 = Color3.fromRGB(255, 255, 255)
+Credits.TextSize = 20.000
+Credits.TextWrapped = true
+
+CreditsCorner.CornerRadius = UDim.new(0, 4)
+CreditsCorner.Name = "CreditsCorner"
+CreditsCorner.Parent = Credits
+
+EnterKoalaHub.Name = "EnterKoalaHub"
+EnterKoalaHub.Parent = TabButtons
+EnterKoalaHub.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+EnterKoalaHub.BorderSizePixel = 0
+EnterKoalaHub.Position = UDim2.new(0, 0, 0.312312305, 0)
+EnterKoalaHub.Size = UDim2.new(0, 135, 0, 48)
+EnterKoalaHub.Font = Enum.Font.Nunito
+EnterKoalaHub.Text = "Enter KoalaHub"
+EnterKoalaHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+EnterKoalaHub.TextSize = 20.000
+EnterKoalaHub.TextWrapped = true
+
+Enter.CornerRadius = UDim.new(0, 4)
+Enter.Name = "Enter"
+Enter.Parent = EnterKoalaHub
+
+TabsFrame.Name = "TabsFrame"
+TabsFrame.Parent = KeyFrame
+TabsFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TabsFrame.BackgroundTransparency = 1.000
+TabsFrame.Position = UDim2.new(0.224625617, 0, 0, 0)
+TabsFrame.Size = UDim2.new(0, 466, 0, 312)
+
+AboutKhFrame.Name = "AboutKhFrame"
+AboutKhFrame.Parent = TabsFrame
+AboutKhFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AboutKhFrame.BackgroundTransparency = 1.000
+AboutKhFrame.Size = UDim2.new(0, 466, 0, 312)
+AboutKhFrame.Visible = false
+
+KhubInfoLabel.Name = "KhubInfoLabel"
+KhubInfoLabel.Parent = AboutKhFrame
+KhubInfoLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+KhubInfoLabel.BackgroundTransparency = 1.000
+KhubInfoLabel.Position = UDim2.new(-0.00429184549, 0, 0, 0)
+KhubInfoLabel.Size = UDim2.new(0, 466, 0, 38)
+KhubInfoLabel.Font = Enum.Font.SourceSans
+KhubInfoLabel.Text = "KoalaHub Info"
+KhubInfoLabel.TextColor3 = Color3.fromRGB(255, 2551, 255)
+KhubInfoLabel.TextSize = 25.000
+
+TextForKhInfo.Name = "TextForKhInfo"
+TextForKhInfo.Parent = AboutKhFrame
+TextForKhInfo.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+TextForKhInfo.Position = UDim2.new(0.0293941908, 0, 0.121794872, 0)
+TextForKhInfo.Size = UDim2.new(0, 434, 0, 257)
+TextForKhInfo.Font = Enum.Font.SourceSans
+TextForKhInfo.Text = "KoalaHub was developed by a sole developer known as KoalaPlayz#0001. This script hub supports many well known game in ROBLOX! I'm hoping that you'll appreciate all the hardwork that Koala has put into this project. If you use it, much thanks to you!"
+TextForKhInfo.TextColor3 = Color3.fromRGB(255, 2551, 255)
+TextForKhInfo.TextScaled = true
+TextForKhInfo.TextSize = 25.000
+TextForKhInfo.TextWrapped = true
+
+UiCornerKhInfo.Name = "UiCornerKhInfo"
+UiCornerKhInfo.Parent = TextForKhInfo
+
+WhatKhSupportsFrame.Name = "WhatKhSupportsFrame"
+WhatKhSupportsFrame.Parent = TabsFrame
+WhatKhSupportsFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WhatKhSupportsFrame.BackgroundTransparency = 1.000
+WhatKhSupportsFrame.Size = UDim2.new(0, 466, 0, 313)
+WhatKhSupportsFrame.Visible = false
+
+WhatKhSupportsLabel.Name = "WhatKhSupportsLabel"
+WhatKhSupportsLabel.Parent = WhatKhSupportsFrame
+WhatKhSupportsLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WhatKhSupportsLabel.BackgroundTransparency = 1.000
+WhatKhSupportsLabel.Position = UDim2.new(-0.00429184549, 0, 0, 0)
+WhatKhSupportsLabel.Size = UDim2.new(0, 466, 0, 38)
+WhatKhSupportsLabel.Font = Enum.Font.SourceSans
+WhatKhSupportsLabel.Text = "What Games KoalaHub Supports As Of Now"
+WhatKhSupportsLabel.TextColor3 = Color3.fromRGB(255, 2551, 255)
+WhatKhSupportsLabel.TextSize = 25.000
+
+WhatKhSupportsText.Name = "WhatKhSupportsText"
+WhatKhSupportsText.Parent = WhatKhSupportsFrame
+WhatKhSupportsText.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+WhatKhSupportsText.Position = UDim2.new(0.0293941908, 0, 0.121794872, 0)
+WhatKhSupportsText.Size = UDim2.new(0, 434, 0, 254)
+WhatKhSupportsText.Font = Enum.Font.SourceSans
+WhatKhSupportsText.Text = "KoalaHub currently supports the Following Games: Build A Boat For Treasure, Murder Mystery 2, Prison Life, Arsenal, and Tower Of Hell. "
+WhatKhSupportsText.TextColor3 = Color3.fromRGB(255, 2551, 255)
+WhatKhSupportsText.TextSize = 35.000
+WhatKhSupportsText.TextWrapped = true
+
+WhatKhSupportsTextsCorner.Name = "WhatKhSupportsTextsCorner"
+WhatKhSupportsTextsCorner.Parent = WhatKhSupportsText
+
+CreditsFrame.Name = "CreditsFrame"
+CreditsFrame.Parent = TabsFrame
+CreditsFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CreditsFrame.BackgroundTransparency = 1.000
+CreditsFrame.Size = UDim2.new(0, 466, 0, 313)
+CreditsFrame.Visible = false
+
+CreditsLabel.Name = "CreditsLabel"
+CreditsLabel.Parent = CreditsFrame
+CreditsLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CreditsLabel.BackgroundTransparency = 1.000
+CreditsLabel.Position = UDim2.new(-0.00429184549, 0, 0, 0)
+CreditsLabel.Size = UDim2.new(0, 466, 0, 38)
+CreditsLabel.Font = Enum.Font.SourceSans
+CreditsLabel.Text = "Credits"
+CreditsLabel.TextColor3 = Color3.fromRGB(255, 2551, 255)
+CreditsLabel.TextSize = 25.000
+
+CreditsLabel_2.Name = "CreditsLabel"
+CreditsLabel_2.Parent = CreditsFrame
+CreditsLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CreditsLabel_2.BackgroundTransparency = 1.000
+CreditsLabel_2.Position = UDim2.new(0, 0, 0.121405751, 0)
+CreditsLabel_2.Size = UDim2.new(0, 466, 0, 38)
+CreditsLabel_2.Font = Enum.Font.SourceSans
+CreditsLabel_2.Text = "Main Dev - KoalaPlayz#0001"
+CreditsLabel_2.TextColor3 = Color3.fromRGB(255, 2551, 255)
+CreditsLabel_2.TextSize = 25.000
+
+CreditsLabel_3.Name = "CreditsLabel"
+CreditsLabel_3.Parent = CreditsFrame
+CreditsLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CreditsLabel_3.BackgroundTransparency = 1.000
+CreditsLabel_3.Position = UDim2.new(-1.86264515e-09, 0, 0.242811501, 0)
+CreditsLabel_3.Size = UDim2.new(0, 466, 0, 38)
+CreditsLabel_3.Font = Enum.Font.SourceSans
+CreditsLabel_3.Text = "Main Scripter - KoalaPlayz#0001"
+CreditsLabel_3.TextColor3 = Color3.fromRGB(255, 2551, 255)
+CreditsLabel_3.TextSize = 25.000
+
+CreditsLabel_4.Name = "CreditsLabel"
+CreditsLabel_4.Parent = CreditsFrame
+CreditsLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CreditsLabel_4.BackgroundTransparency = 1.000
+CreditsLabel_4.Position = UDim2.new(0, 0, 0.370607018, 0)
+CreditsLabel_4.Size = UDim2.new(0, 466, 0, 38)
+CreditsLabel_4.Font = Enum.Font.SourceSans
+CreditsLabel_4.Text = "Ui Librarys Used - Kavo, Vep's Ui Lib, Discord Lib"
+CreditsLabel_4.TextColor3 = Color3.fromRGB(255, 2551, 255)
+CreditsLabel_4.TextSize = 25.000
+
+CreditsLabel_5.Name = "CreditsLabel"
+CreditsLabel_5.Parent = CreditsFrame
+CreditsLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CreditsLabel_5.BackgroundTransparency = 1.000
+CreditsLabel_5.Position = UDim2.new(0, 0, 0.507987201, 0)
+CreditsLabel_5.Size = UDim2.new(0, 466, 0, 38)
+CreditsLabel_5.Font = Enum.Font.SourceSans
+CreditsLabel_5.Text = "And You For Using This Ui!"
+CreditsLabel_5.TextColor3 = Color3.fromRGB(255, 2551, 255)
+CreditsLabel_5.TextSize = 25.000
+
+EnterKHub.Name = "EnterKHub"
+EnterKHub.Parent = TabsFrame
+EnterKHub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+EnterKHub.BackgroundTransparency = 1.000
+EnterKHub.Size = UDim2.new(0, 466, 0, 313)
+
+
+UICorner.CornerRadius = UDim.new(0, 4)
+UICorner.Parent = Submit
+
+EnterKhubLabel.Name = "EnterKhubLabel"
+EnterKhubLabel.Parent = EnterKHub
+EnterKhubLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+EnterKhubLabel.BackgroundTransparency = 1.000
+EnterKhubLabel.Position = UDim2.new(-0.00429184549, 0, 0, 0)
+EnterKhubLabel.Size = UDim2.new(0, 466, 0, 38)
+EnterKhubLabel.Font = Enum.Font.SourceSans
+EnterKhubLabel.Text = "WhiteList System"
+EnterKhubLabel.TextColor3 = Color3.fromRGB(255, 2551, 255)
+EnterKhubLabel.TextSize = 25.000
+
+TextLabel.Parent = EnterKHub
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0, 0, 0.440894604, 0)
+TextLabel.Size = UDim2.new(0, 466, 0, 36)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Enter KoalaHub's Discord For The WhiteListKey"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 25.000
+
+TextBox.Parent = EnterKHub
+TextBox.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+TextBox.Position = UDim2.new(0.0285330191, 0, 0.121405751, 0)
+TextBox.Size = UDim2.new(0, 434, 0, 38)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.Text = "\"Enter WhiteListKey Here\""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextSize = 20.000
+TextBox.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+UICorner_2.CornerRadius = UDim.new(0, 4)
+UICorner_2.Parent = TextBox
+
+RainbowDrag.Name = "RainbowDrag"
+RainbowDrag.Parent = KeyFrame
+RainbowDrag.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RainbowDrag.Position = UDim2.new(0, 0, -0.021999957, 0)
+RainbowDrag.Size = UDim2.new(0, 601, 0, 7)
+
+UICorner_3.CornerRadius = UDim.new(0, 4)
+UICorner_3.Parent = RainbowDrag
+
+
+-- Scripts:
+
+local function ZWETQBZ_fake_script() -- AboutKh.LocalScript 
+	local script = Instance.new('LocalScript', AboutKh)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.Parent.TabsFrame.AboutKhFrame.Visible = true
+		script.Parent.Parent.Parent.TabsFrame.CreditsFrame.Visible = false
+		script.Parent.Parent.Parent.TabsFrame.EnterKHub.Visible = false
+		script.Parent.Parent.Parent.TabsFrame.WhatKhSupportsFrame.Visible = false
+	end)
+end
+coroutine.wrap(ZWETQBZ_fake_script)()
+local function ZFZBG_fake_script() -- WhatKhSupports.LocalScript 
+	local script = Instance.new('LocalScript', WhatKhSupports)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.Parent.TabsFrame.AboutKhFrame.Visible = false
+		script.Parent.Parent.Parent.TabsFrame.CreditsFrame.Visible = false
+		script.Parent.Parent.Parent.TabsFrame.EnterKHub.Visible = false
+		script.Parent.Parent.Parent.TabsFrame.WhatKhSupportsFrame.Visible = true
+	end)
+end
+coroutine.wrap(ZFZBG_fake_script)()
+local function ZWXFZCI_fake_script() -- Credits.LocalScript 
+	local script = Instance.new('LocalScript', Credits)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.Parent.TabsFrame.AboutKhFrame.Visible = false
+		script.Parent.Parent.Parent.TabsFrame.CreditsFrame.Visible = true
+		script.Parent.Parent.Parent.TabsFrame.EnterKHub.Visible = false
+		script.Parent.Parent.Parent.TabsFrame.WhatKhSupportsFrame.Visible = false
+	end)
+end
+coroutine.wrap(ZWXFZCI_fake_script)()
+local function FYSXGYH_fake_script() -- EnterKoalaHub.LocalScript 
+	local script = Instance.new('LocalScript', EnterKoalaHub)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.Parent.TabsFrame.AboutKhFrame.Visible = false
+		script.Parent.Parent.Parent.TabsFrame.CreditsFrame.Visible = false
+		script.Parent.Parent.Parent.TabsFrame.EnterKHub.Visible = true
+		script.Parent.Parent.Parent.TabsFrame.WhatKhSupportsFrame.Visible = false
+	end)
+end
+coroutine.wrap(FYSXGYH_fake_script)()
+local function LDSVD_fake_script() -- RainbowDrag.LocalScript 
+	local script = Instance.new('LocalScript', RainbowDrag)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	
+	counter = 0
+	
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+	
+		counter = counter + 0.01
+	end
+end
+coroutine.wrap(LDSVD_fake_script)()
+Submit.Name = "Submit"
+Submit.Parent = EnterKHub
+Submit.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+Submit.BorderColor3 = Color3.fromRGB(59, 84, 84)
+Submit.BorderSizePixel = 2
+Submit.Position = UDim2.new(0.0285329986, 0, 0.277193367, 0)
+Submit.Size = UDim2.new(0, 435, 0, 39)
+Submit.Font = Enum.Font.SourceSans
+Submit.Text = "Submit"
+Submit.TextColor3 = Color3.fromRGB(255, 255, 255)
+Submit.TextSize = 20.000
+Submit.MouseButton1Down:connect(function()
+    local Keytext = TextBox.Text
+local lp = game.Players.LocalPlayer
+
+KeyScreen:Destroy()
+wait(0.5)
+game.StarterGui:SetCore("SendNotification", {
+
+	Title = "Notification";
+
+	Text = "Validating Key...";
+
+	Icon = "rbxassetid://3469494080";
+
+	Duration = 3;
+})
+game.StarterGui:SetCore("SendNotification", {
+
+	Title = "Notification";
+
+	Text = "Validating Key...";
+
+	Icon = "rbxassetid://3469494080";
+
+	Duration = 3;
+})
+game.StarterGui:SetCore("SendNotification", {
+
+	Title = "Notification";
+
+	Text = "Validating Key...";
+
+	Icon = "rbxassetid://3469494080";
+
+	Duration = 3;
+})
+game.StarterGui:SetCore("SendNotification", {
+
+	Title = "Notification";
+
+	Text = "Validating Key...";
+
+	Icon = "rbxassetid://3469494080";
+
+	Duration = 3;
+})
+game.StarterGui:SetCore("SendNotification", {
+
+	Title = "Notification";
+
+	Text = "Validating Key...";
+
+	Icon = "rbxassetid://3469494080";
+
+	Duration = 3;
+})game.StarterGui:SetCore("SendNotification", {
+
+	Title = "Notification";
+
+	Text = "Validating Key...";
+
+	Icon = "rbxassetid://3469494080";
+
+	Duration = 10;
+})
+wait(2)
+if Keytext == "HugoBossEpic" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/KoaIaPlayz/REMOTEMAIN/main/AFS"))() 
+    game.StarterGui:SetCore("SendNotification", {
+
+	Title = "Notification!";
+
+	Text = "Correct Key";
+
+	Icon = "rbxassetid://375691700";
+
+	Duration = 5;
+
+})
+wait(0.1)
+
+KeyScreen:Destroy() 
+
+else
+    wait(5)
+	game.Players.LocalPlayer:Kick("Wrong Key.")
+end
+end)
+if game.Players.LocalPlayer.Name == "KoalaP1ayz" then
+    KeyScreen:Destroy()
+    wait(0.1)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/KoaIaPlayz/REMOTEMAIN/main/AFS"))() 
+        game.StarterGui:SetCore("SendNotification", {
+
+	Title = "Notification!";
+
+	Text = "Hello Owner!";
+
+	Icon = "rbxassetid://375691700";
+
+	Duration = 10;
+
+})
+end
+if game.Players.LocalPlayer.Name == "ROBLOX" then
+    game.Players.LocalPlayer:Kick("Stop")
+end
+if game.Players.LocalPlayer.Name == "BuilderMan" then
+    game.Players.LocalPlayer:Kick("Stop")
+end
